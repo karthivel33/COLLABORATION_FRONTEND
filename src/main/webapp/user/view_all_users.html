@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<link href="resources/css/summernote.css" rel="stylesheet">
+<script src="resources/js/bootstrap.js"></script>    
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+ <link href="resources/css/boot.css"  rel="stylesheet">
+   
+    <link href="resources/css/styl.css" rel="stylesheet">
+    
+<head>
+</head>
+ <body>
+	   
+
+
+  <div data-ng-include src="'shared/topbar.html'"></div>
+  
+
+
+
+<div ng-controller="UserController as ctrl">
+<div ng-show="currentUser==''">
+<div class="alert alert-danger fade in">You are not logged in!</div>
+</div></div>
+
+<div class="container" ng-controller="UserController as ctrl">
+<h2>Here is the list of users</h2>
+
+<table class="table table-hover">
+             
+      <tr>
+      <th>User Id</th>
+	<th>User Name</th>
+	<th>Email</th>
+	<th>Contact</th>
+	<th>Role</th>
+	<th>Edit</th>
+	<th>Delete</th>
+  </tr>
+  <tr ng-repeat="user in ctrl.users">
+      <td>{{user.user_id}}</td>
+      <td>{{user.user_name}}</td>
+      <td>{{user.email}}</td>
+       <td>{{user.contact}}</td>
+        <td>{{user.role}}</td>
+           		
+       <td><a href="#/"><span class="glyphicon glyphicon-ok"> </span></a></td>
+       <td><a href="#/"><span class="glyphicon glyphicon-remove"> </span></a></td>
+   
+           	
+      </tr>
+  
+	 </table>
+
+
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+</body>
+</html>

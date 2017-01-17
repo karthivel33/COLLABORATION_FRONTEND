@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+                    <!-- Javascript -->
+	
+	<script src="resources/js/bootstrap.js"></script>
+
+
+                      <!-- Bootstrap css -->
+          <link href="resources/css/register_style.css"  rel="stylesheet">
+   
+       <script src="resources/js/register.js"></script>
+       
+       <script>
+       
+       $(document).ready(function() {
+
+    		//On click signup, hide login and show registration form
+    		$("#signup").click(function() {
+    			$("#first").slideUp("slow", function(){
+    				$("#second").slideDown("slow");
+    			});
+    		});
+
+    		//On click signup, hide registration and show login form
+    		$("#signin").click(function() {
+    			$("#second").slideUp("slow", function(){
+    				$("#first").slideDown("slow");
+    			});
+    		});
+
+
+    	});
+       </script>
+</head>
+<body>
+<div class="wrapper">
+<!-- Login Procedure -->
+	<br>
+	<br>
+
+	<div class="login_box">
+	
+		<div class="login_header">
+				<h1>Amicon!</h1>
+				Login or sign up below!
+			</div>
+			<br>
+
+          <div id="second">
+
+<div  ng-controller="UserController as ctrl">
+
+
+<form ng-submit="ctrl.submit()" name="myForm" class="form-horizontal" enctype="multipart/form-data">
+
+
+<div class="radio">
+<label class="radio-inline">
+<input type="radio" name="role" value="student" ng-model="ctrl.user.role" >Student
+</label>
+
+<label class="radio-inline">
+<input type="radio" name="role" value="alumni" ng-model="ctrl.user.role">Alumni
+</label>
+
+<label class="radio-inline">
+<input type="radio" name="role" value="employee" ng-model="ctrl.user.role">Employee
+</label>
+
+</div>
+
+
+<input type="text"  ng-model="ctrl.user.user_name" id="name"
+ placeholder="Enter your Name" >
+
+
+<input type="text" ng-model="ctrl.user.email" id="email"
+ placeholder="Enter your Email" >
+ <br>
+
+
+
+
+<br>
+<input type="text"  ng-model="ctrl.user.contact" id="contact"
+ placeholder="Enter your Contact No." >
+
+
+
+<input type="password" ng-model="ctrl.user.password" id="password"
+placeholder="Enter your Password">
+
+
+
+<input type="password"  ng-model="ctrl.user.cpassword" id="cpassword"
+placeholder="Enter your Confirmed Password" >
+
+
+
+<br>
+<input type="submit" value="Register" class="btn btn-primary btn-sm">
+<br>
+
+
+<a href="#/" id="signin" class="signin">Already have an account? Sign in here!</a>
+</form>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="resources/css/summernote.css" rel="stylesheet">
+<script src="resources/js/bootstrap.js"></script>    
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+ <link href="resources/css/boot.css"  rel="stylesheet">
+<link href="resources/css/styl.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div data-ng-controller="EventController as ctrl">
+<div data-ng-include src="'shared/topbar.html'"></div>
+Welcome to events
+<div data-ng-repeat="event in ctrl.events">
+Title: <a href="#/view_event" data-ng-click="ctrl.getSelectedEvent(event.event_id)">{{event.event_title}}</a>
+</div>
+</div>
+
+<br/><br/><br/><br/><br/>
+
+</body>
+</html>

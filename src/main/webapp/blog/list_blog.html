@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="resources/css/note.css" rel="stylesheet">
+<script src="resources/js/bootstrap.js"></script>    
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+ <link href="resources/css/boot.css"  rel="stylesheet">
+<link href="resources/css/styl.css" rel="stylesheet">
+    <style>
+    h2 {
+     color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+    </style>
+
+</head>
+
+<body>
+   
+  <div data-ng-include src="'shared/topbar.html'"></div>
+   
+   
+   <div class="col-lg-1">
+   <div class="user_details">
+   <a href="#/settings"><img src="resources/images/profile_pics/defaults/head.png"></a>
+   </div>
+   </div>
+   
+<div class="col-lg-1">
+</div>
+
+<div class="col-lg-9" >
+<div ng-controller="BlogController as ctrl">
+<h2>Welcome to blogs</h2>
+<div ng-repeat="blog in ctrl.blogs">
+    <a href="#/view_blog" ng-click="ctrl.getSelectedBlog(blog.blog_id)"><h4>{{blog.blog_title}}</h4></a>
+</div>
+</div>
+</div>
+<div class="col-lg-1">
+<div ng-include src="'shared/rightAside.html'"></div>
+</div>
+
+
+<div ng-include src="'shared/leftside.html'"></div>
+
+  <div class="col-lg-4">
+  </div>
+  
+<iframe width="250" height="200"  align="right" src="https://www.youtube.com/embed/NsndhCQ5hRY">
+</iframe>
+</body>
+
+</html>
+<br>
+<br>
+<div ng-include src="'shared/footer.html'"></div>

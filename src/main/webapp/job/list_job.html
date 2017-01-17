@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+   
+    
+     
+	<script src="resources/js/bootstrap.js"></script>    
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="resources/css/boot.css"  rel="stylesheet">
+    <link href="resources/css/styl.css"  rel="stylesheet">
+   
+<style>
+
+</style>
+</head>
+<body>
+
+
+	   
+	
+
+<div  data-ng-controller="JobController as ctrl">
+ <div data-ng-include src="'shared/topbar.html'"></div>
+
+<span class="lead">List of jobs</span>
+<br>
+<br>
+<p><input type="text" ng-model="job.ctrl.title"></p>
+
+<div ng-repeat="job in ctrl.jobs | filter:job.ctrl.title">
+
+
+
+<div class=" column">
+<h4>Title: <a href="#/view_job" ng-click="ctrl.getSelectedJob(job.job_id)">{{job.job_title}}</a><br></h4>
+<button type="button" ng-click="ctrl.applyForJob(selectedJob.job_id)" 
+class="btn btn-warning btn-sm"  style= "right">Apply for job</button>
+</div>
+<br>
+</div>
+</div>
+
+<br/><br/><br/><br/><br/><br/><br/>
+
+</body>
+	</html>

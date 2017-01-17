@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="resources/css/summernote.css" rel="stylesheet">
+<script src="resources/js/bootstrap.js"></script>    
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+ <link href="resources/css/boot.css"  rel="stylesheet">
+<link href="resources/css/styl.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div data-ng-hide="currentUser==''">
+
+  <div data-ng-include data-ng-src="'shared/topbar.html'"></div>
+  
+
+<div data-ng-controller="EventController as ctrl">
+<div data-ng-show="currentUser==''">
+<div class="alert alert-danger fade in">You are not logged in!</div>
+</div>
+</div>
+
+<br/><br/>
+
+<div data-ng-controller="EventController as ctrl">
+<label>{{selectedEvent.event_title}}</label>
+<br>
+Posted By:<label>{{selectedEvent.user_name}}</label><br/>
+on <p>{{selectedEvent.creation_date}}</p>
+<br>
+<br>
+<p>{{selectedEvent.info}}</p><br/><br/>
+
+<button type="button" data-ng-click="ctrl.applyForEvent(selectedEvent.event_id)" 
+class="btn btn-warning btn-sm">Comment</button>
+</div>
+</div>
+
+<br/><br/><br/><br/><br/><br/>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="resources/js/bootstrap.js"></script>
+<link href="resources/css/register_style.css"  rel="stylesheet">
+
+</head>
+<body>
+
+
+	<div class="wrapper">
+		<!-- Login Procedure -->
+		<br> <br>
+
+		<div class="login_box">
+
+			<div class="login_header">
+				<h1>Amicon!</h1>
+				Login or sign up below!
+			</div>
+			<br>
+			<div id="first">
+
+				<div data-ng-controller="UserController as ctrl">
+
+					<form data-ng-submit="ctrl.login()" name="myForm">
+
+						<input type="text" data-ng-model="ctrl.user.email" id="email"
+							class="form-control input-sm" placeholder="Username"> 
+							<br>
+							
+                     <input type="password" data-ng-model="ctrl.user.password" id="password"
+							class="form-control input-sm" placeholder="Enter your Password">
+			
+                          <br>
+                          
+
+		                 <input type="submit" value="Log In" name="login_button">
+		                 <br>
+		                 
+	<a href="#" id="signup" class="signup">Need and account? Register here!</a>
+	</form>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

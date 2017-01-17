@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<link href="resources/css/summernote.css" rel="stylesheet">
+<script src="resources/js/bootstrap.js"></script>    
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+ <link href="resources/css/boot.css"  rel="stylesheet">
+   
+    <link href="resources/css/styl.css" rel="stylesheet">
+    
+<head>
+</head>
+
+<body>
+
+
+
+    
+   
+  
+
+	
+
+    
+
+
+	   
+
+  <div data-ng-include src="'shared/topbar.html'"></div>
+
+
+
+
+
+
+
+<div ng-controller="BlogController as ctrl">
+<div ng-show="currentUser==''">
+<div class="alert alert-danger fade in">You are not logged in!</div>
+</div></div>
+
+
+<div class="container" ng-controller="BlogController as ctrl">
+<h3>Here is the list of blogs</h3>
+
+<table class="table table-hover">
+             
+      <tr>
+      <th>Blog Id</th>
+	<th>Title</th>
+	<th>Content</th>
+	<th>Date posted</th>
+	<th>Status</th>
+	<th>Posted By</th>
+	<th>Approve</th>
+	<th>Delete</th>
+  </tr>
+  <tr ng-repeat="blog in ctrl.blogs">
+      <td>{{blog.blog_id}}</td>
+      <td>{{blog.blog_title}}</td> 
+        <td>{{blog.description}}</td>
+        <td>{{blog.creation_date}}</td>
+          <td>{{blog.status}}</td>
+       <td> {{blog.user_name}}</td>
+           		
+       <td><a href="#/"><span class="glyphicon glyphicon-ok"> </span></a></td>
+       <td><a href="#/"><span class="glyphicon glyphicon-remove"> </span></a></td>
+   
+           	
+      </tr>
+  
+	 </table>
+
+
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+</body>
+</html>

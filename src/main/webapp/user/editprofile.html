@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="resources/css/note.css" rel="stylesheet">
+<link href="resources/css/style.css" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  background-color: #E6EAE8;
+
+	
+}
+</style>
+</head>
+
+<body>
+
+
+<div data-ng-include src="'shared/topbar.html'"></div>
+<br>
+<br>
+<br>
+	<!-- Page Content -->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-2">
+			
+			</div>
+			<div class="col-sm-12 col-md-10">
+
+				<div class="panel panel-default">
+
+					<div class="panel-heading">
+						<h3 class="panel-title">Edit Profile</h3>
+					</div>
+
+					<div class="panel-body">
+						<div class="row">
+						
+						<form name="myForm" method="post"
+						action="http://localhost:9021/AmiconBackEnd/doUpload"
+						enctype="multipart/form-data" style="text-align: center;">
+						<div class="row uniform">
+							<div class="12u$ 12u$(small)">
+								<input type="text" value="Upload Profile Picture" disabled
+									style="text-align: center;" />
+							</div>
+							
+						
+						  	<div class="form-group">						  	
+						  		<div class="col-md-offset-4 col-md-3">
+								    <label for="uploadImage">Upload Image for Profile</label>
+								 	<div class="12u$ 12u$(small)">
+								<input type="file" name="fileUpload" size="50" />
+							</div>	    		
+					    		  	
+					    		      		  		
+						  		</div>
+						  		<div class="col-md-3">
+						  			<div id="imgContainer">
+						  				<img src="${images}/profile/${profile.avatar}" width="200px" alt=""/>
+						  			</div>		  			
+						  		</div>
+						  	</div>
+						  	<div class="form-group">
+						  		<div class="col-md-offset-4 col-md-2">
+						  			<input type="submit" value="Update Profile" class="btn btn-primary"/>
+						  			
+						  		</div>
+						  	</div>
+							</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!-- Footer -->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+	<div data-ng-include src="'shared/footer.html'">
+
+	</div>
+	
+
+</body>
+
+</html>
+
+

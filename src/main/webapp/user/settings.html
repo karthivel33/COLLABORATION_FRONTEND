@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet"
+	href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<!-- Bootstrap core CSS -->
+<link href="resources/css/styl.css" rel="stylesheet">
+
+<!-- Javascript -->
+
+
+<script src="resources/js/bootstrap.js"></script>
+</head>
+
+<body>
+	
+
+<div data-ng-controller="UserController as ctrl">
+<div data-ng-include src="'shared/topbar.html'"></div>
+	<div class="panel-heading">
+		<h3 class="panel-title">{{user.user_name}}</h3>
+	</div>
+
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-md-3" align="center">
+				<img 
+					src="resources/images/profile_pics/defaults/head.png" width="200px">
+
+			</div>
+			<div class="col-md-9">
+				<table class="table table-responsive">
+					<tbody>
+						<tr>
+							<td>Profile Created At:</td>
+							<td>{{profile.createdAt}}</td>
+						</tr>
+						<tr>
+							<td>Email:</td>
+							 <td>{{user.email}}</td>
+						</tr>
+						<tr>
+							<td>Role:</td>
+							 <td>{{currentUser.role}}</td>
+						</tr>
+						<tr>
+							<td>Contact Number:</td>
+							<td>{{user.contact}}</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<button class="btn btn-primary">Friends :
+									{{profile.noOfFriends}}</button>
+								<button class="btn btn-primary">Blogs :
+									{{profile.noOfBlogs}}</button>
+								<button class="btn btn-primary">Forum Posts :
+									{{profile.noOfBlogs}}</button>
+									 <a href="#/editprofile" data-target="#myModal"
+								class="btn btn-warning pull-right">Edit Profile</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+</div>
+	
+
+
+
+
+             
+    </body>
+</html>

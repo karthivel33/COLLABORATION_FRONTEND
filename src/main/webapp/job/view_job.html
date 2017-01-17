@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+	<script src="resources/js/bootstrap.js"></script>    
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="resources/css/boot.css"  rel="stylesheet">
+    <link href="resources/css/styl.css"  rel="stylesheet">
+  
+</head>
+<body>
+
+<div  data-ng-controller="JobController as ctrl">
+ <div data-ng-include src="'shared/topbar.html'"></div>
+ 
+<div ng-show="currentUser==''">
+<div class="alert alert-danger fade in">You are not logged in!</div>
+</div></div>
+
+<div class="container" ng-controller="JobController as ctrl">
+<div class="form-group">
+<label>{{selectedJob.job_title}}</label>
+<br>
+Posted By:<label>{{selectedJob.user_id}}</label>
+on <label>{{dat}}</label>
+<br>
+<br>
+<label>{{selectedJob.company}}</label><br/>
+<label>{{selectedJob.details}}</label>
+
+<button type="button" ng-click="ctrl.applyForJob(selectedJob.job_id)" 
+class="btn btn-warning btn-sm">Apply for job</button>
+</div>
+</div>
+
+<br/><br/><br/><br/><br/><br/><br/>
